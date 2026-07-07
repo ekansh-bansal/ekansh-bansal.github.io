@@ -5,73 +5,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Parkly — Product Case Study</title>
 <meta name="description" content="Parkly product case study — turning idle driveways, lots and garages into bookable parking, with a privacy-first QR alert system. By Ekansh Bansal.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0A'/%3E%3Ctext x='29' y='44' font-family='Arial,sans-serif' font-weight='800' font-size='34' fill='%23FFFFFF' text-anchor='middle'%3EE%3C/text%3E%3Ccircle cx='47' cy='40' r='5' fill='%23E1320A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 :root{
   --ink:#0A0A0A; --paper:#FFFFFF; --cream:#F6F2EB; --accent:#E1320A;
   --line:#E5E5E5; --mut:#9A9A9A;
-  --disp:'Barlow Condensed',sans-serif; --body:'Barlow',sans-serif;
-  --serif:'Instrument Serif',serif; --mono:'JetBrains Mono',ui-monospace,monospace;
 }
 *{margin:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;}
-a{color:inherit;text-decoration:none;}
-.wrap{max-width:1200px;margin:0 auto;padding:0 28px;}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--mut);}
-.kicker{font-family:var(--serif);font-style:italic;color:var(--accent);font-size:clamp(24px,3.2vw,38px);margin-bottom:22px;}
-.h-big{font-family:var(--disp);font-weight:800;letter-spacing:-2px;line-height:.92;font-size:clamp(52px,8.5vw,124px);text-wrap:balance;}
-.h-mid{font-family:var(--disp);font-weight:800;letter-spacing:-1.5px;line-height:.94;font-size:clamp(40px,5.6vw,84px);text-wrap:balance;}
-.lede{font-size:clamp(17px,1.6vw,23px);line-height:1.55;max-width:56ch;text-wrap:pretty;}
-.sec{padding:clamp(72px,11vw,130px) 0;border-bottom:1px solid var(--line);}
-.sec-ink{background:var(--ink);color:var(--paper);border-bottom:1px solid #262626;}
-.sec-ink .lede{color:#cfcfcf;}
-.sec-ink .eyebrow{color:var(--mut);}
-.serif-acc{color:var(--accent);font-style:italic;font-family:var(--serif);font-weight:400;}
-.meta-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:clamp(40px,7vw,80px);}
-.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--cream) 90%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
-.topbar-in{max-width:1200px;margin:0 auto;padding:0 28px;height:54px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.topbar a{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;}
-.topbar a:hover{color:var(--accent);}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-top:1px solid var(--line);}
-.step{padding:36px 32px 8px 0;border-bottom:1px solid var(--line);}
-.step .n{font-family:var(--mono);font-size:13px;color:var(--accent);margin-bottom:14px;letter-spacing:2px;}
-.step h3{font-family:var(--disp);font-weight:800;font-size:clamp(28px,3vw,44px);line-height:.95;letter-spacing:-.5px;margin-bottom:14px;}
-.step p{font-size:17px;line-height:1.55;color:#555;padding-bottom:32px;}
-.supply{border-left:1px solid var(--line);}
-.supply-row{display:flex;align-items:center;gap:22px;padding:22px 0 22px 28px;border-bottom:1px solid var(--line);}
-.supply-row:last-child{border-bottom:none;}
-.supply-row .num{font-family:var(--disp);font-weight:800;font-size:clamp(32px,3.6vw,48px);color:var(--accent);min-width:72px;}
-.supply-row .t{font-family:var(--disp);font-weight:700;font-size:clamp(20px,2.2vw,28px);}
-.supply-row .s{font-family:var(--mono);font-size:13px;color:var(--mut);margin-top:3px;}
-.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
-.split>div{padding:clamp(48px,6vw,80px) clamp(28px,5vw,72px);}
-.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(36px,6vw,84px);align-items:center;}
-.mcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border-top:1px solid #262626;margin-top:44px;}
-.mcols>div{padding:24px 28px 8px 0;border-bottom:1px solid #262626;}
-.mcols .t{font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--accent);margin-bottom:8px;}
-.mcols p{font-size:16.5px;line-height:1.5;color:#bbb;padding-bottom:24px;}
-footer{background:var(--cream);}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+html,body{height:100%;overflow:hidden;background:#0A0A0A;}
+body{font-family:'Barlow',sans-serif;-webkit-font-smoothing:antialiased;}
+
+#stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+#frame{position:relative;width:1920px;height:1080px;transform-origin:center center;box-shadow:0 8px 60px rgba(0,0,0,.5);}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .28s ease;}
+.slide.on{opacity:1;visibility:visible;}
+
+.hud{position:fixed;z-index:20;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#9A9A9A;}
+.hud a{color:#9A9A9A;text-decoration:none;transition:color .2s;}
+.hud a:hover{color:#fff;}
+#hud-top{top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:linear-gradient(180deg,rgba(10,10,10,.55),transparent);}
+#hud-bot{bottom:0;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:22px;padding:14px 20px;background:linear-gradient(0deg,rgba(10,10,10,.55),transparent);}
+.navbtn{cursor:pointer;user-select:none;border:1px solid #333;background:rgba(10,10,10,.6);color:#cfcfcf;width:40px;height:40px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:16px;transition:border-color .2s,color .2s;}
+.navbtn:hover{border-color:#E1320A;color:#fff;}
+#counter{min-width:64px;text-align:center;color:#cfcfcf;}
+#bar{position:fixed;top:0;left:0;height:3px;background:#E1320A;z-index:30;transition:width .3s ease;}
+#hint{position:fixed;bottom:64px;left:50%;transform:translateX(-50%);z-index:20;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;color:#666;transition:opacity .6s;pointer-events:none;}
+@media (max-width:700px){#hint{display:none;}}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="topbar-in">
-    <a href="index.html">← Ekansh Bansal</a>
-    <span class="eyebrow" style="font-size:11px;">Parkly — Product Case Study</span>
-    <a href="https://parkly.co.in" target="_blank" rel="noopener">parkly.co.in ↗</a>
-  </div>
+<div id="bar"></div>
+<div id="hud-top" class="hud">
+  <a href="index.html">← Ekansh Bansal</a>
+  <span>Parkly — Product Case Study</span>
+  <a href="https://parkly.co.in" target="_blank" rel="noopener">parkly.co.in ↗</a>
 </div>
 
-<!-- COVER -->
-<header class="sec" style="background:var(--cream); text-align:center;">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">Case study / 2026</span><span class="eyebrow">Parkly — the product</span></div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-105.49 -194.24 379.5853 425.376" width="min(180px,40vw)" fill="currentColor" style="overflow:visible;color:var(--ink);margin-bottom:36px;">
+<div id="stage">
+<div id="frame">
+
+<!-- 01 COVER -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--paper);color:var(--ink);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--ink)">CASE STUDY <span style="color:var(--mut)">/ 2026</span></div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">PARKLY — THE PRODUCT</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:48px">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-105.49 -194.24 379.5853 425.376" width="220" fill="currentColor" style="overflow:visible;color:var(--ink)">
       <path d="M 72.935 30.652 C 73.006 37.757 72.07 44.886 70.249 51.896 L 2.001 68.89 L -105.06 71.964 L -105.36 71.972 C -105.56 27.318 -66.116 -18.085 -17.033 -29.577 C 32.202 -41.103 72.481 -14.144 72.935 30.641 L 71.951 31.064 L 72.935 30.641 C 72.935 30.643 72.935 30.647 72.935 30.65 L 72.935 30.652 Z"/>
       <rect x="-33.619" y="-53.186" width="38.791" height="106.373" style="transform-box:fill-box;transform-origin:50% 50%" transform="matrix(0.000002, 1, -1, 0.000002, -37.949568, 87.725983)"/>
       <rect x="-105.49" y="-194.24" width="267.973" height="106.517"/>
@@ -79,169 +63,282 @@ footer{background:var(--cream);}
       <rect x="-74.469" y="-60.369" width="186.181" height="106.838" style="transform-box:fill-box;transform-origin:50% 50%" transform="matrix(0.981577, -0.191066, 0.191066, 0.981577, 63.411966, 12.645101)"/>
       <g fill="#E1320A"><rect x="-104.85" y="124.387" width="20.5" height="20.5"/><rect x="-83.35" y="124.387" width="20.5" height="20.5"/><rect x="-61.85" y="124.387" width="20.5" height="20.5"/><rect x="-104.85" y="145.887" width="20.5" height="20.5"/><rect x="-83.35" y="167.387" width="20.5" height="20.5"/><rect x="-61.85" y="167.387" width="20.5" height="20.5"/><rect x="-104.85" y="167.387" width="20.5" height="20.5"/><rect x="-61.85" y="145.887" width="20.5" height="20.5"/><rect x="-18.85" y="124.387" width="20.5" height="20.5"/><rect x="-61.85" y="188.887" width="20.5" height="20.5"/><rect x="-40.35" y="210.387" width="20.5" height="20.5"/><rect x="-18.85" y="210.387" width="20.5" height="20.5"/><rect x="-18.85" y="188.887" width="20.5" height="20.5"/><rect x="-104.85" y="210.387" width="20.5" height="20.5"/><rect x="-61.85" y="210.387" width="20.5" height="20.5"/><rect x="-40.35" y="167.387" width="20.5" height="20.5"/></g>
     </svg>
-    <div class="kicker">every spot, found —</div>
-    <h1 class="h-big" style="font-size:clamp(72px,13vw,168px);">Parkly.</h1>
-    <p class="eyebrow" style="margin-top:44px;">Space → Search → Scan → Solved</p>
+    <div style="text-align:center">
+      <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:34px;color:var(--accent);margin-bottom:14px;letter-spacing:.5px">every spot, found —</div>
+      <h1 style="font-family:'Barlow Condensed';font-weight:800;font-size:168px;line-height:.86;letter-spacing:-5px">Parkly.</h1>
+    </div>
   </div>
-</header>
-
-<!-- 01 PROBLEM -->
-<section class="sec sec-ink">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">01 / The problem</span><span class="eyebrow">Dead space</span></div>
-    <div class="kicker">the city isn't full —</div>
-    <h2 class="h-big">It's just <span class="serif-acc">hiding</span> its space.</h2>
-    <p class="lede" style="margin-top:36px;">Driveways sit empty all day while their owners are at work. Private lots go quiet on weekends. Drivers circle the same block looking for a spot that's ten feet away — behind a fence, off the map, un-bookable.</p>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">
+    <span>SPACE → SEARCH → SCAN → SOLVED</span>
+    <span style="color:var(--ink)">SIX SECTIONS</span>
   </div>
 </section>
 
-<!-- 02 SUPPLY -->
-<section class="sec">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">02 / Unused space</span><span class="eyebrow">The supply</span></div>
-    <div class="g2">
-      <div>
-        <div class="kicker">what's already there —</div>
-        <h2 class="h-mid">Turn idle space into real spots.</h2>
-        <p class="lede" style="margin-top:26px;color:#555;font-size:clamp(16px,1.4vw,20px);">Parkly lets anyone with a driveway, a lot, or a spare garage bay list it in minutes. No construction, no permits — just space that already exists, put to work.</p>
-      </div>
-      <div class="supply">
-        <div class="supply-row"><span class="num">01</span><div><div class="t">Home driveways</div><div class="s">empty on weekdays, 9–5</div></div></div>
-        <div class="supply-row"><span class="num">02</span><div><div class="t">Office lots</div><div class="s">empty nights &amp; weekends</div></div></div>
-        <div class="supply-row"><span class="num">03</span><div><div class="t">Retail &amp; community lots</div><div class="s">idle outside business hours</div></div></div>
-        <div class="supply-row"><span class="num">04</span><div><div class="t">Spare garage bays</div><div class="s">rarely used at all</div></div></div>
-      </div>
+<!-- 02 INDEX -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--paper);color:var(--ink);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">INDEX</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">N°&nbsp;02</div>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center;margin-top:-20px">
+    <div>
+      <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:38px;color:var(--accent);margin-bottom:30px">the pitch —</div>
+      <h2 style="font-family:'Barlow Condensed';font-weight:800;font-size:120px;line-height:.86;letter-spacing:-3px">Why Parkly<br>works.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding:22px 0"><span style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);min-width:54px">01</span><span style="font-family:'Barlow Condensed';font-weight:700;font-size:44px;letter-spacing:-.5px;flex:1;padding:0 30px">The Problem</span><span style="font-family:'JetBrains Mono';font-size:13px;color:var(--mut)">— dead space</span></div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding:22px 0"><span style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);min-width:54px">02</span><span style="font-family:'Barlow Condensed';font-weight:700;font-size:44px;letter-spacing:-.5px;flex:1;padding:0 30px">Unused Space</span><span style="font-family:'JetBrains Mono';font-size:13px;color:var(--mut)">— the supply</span></div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding:22px 0"><span style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);min-width:54px">03</span><span style="font-family:'Barlow Condensed';font-weight:700;font-size:44px;letter-spacing:-.5px;flex:1;padding:0 30px">Nationwide Search</span><span style="font-family:'JetBrains Mono';font-size:13px;color:var(--mut)">— the reach</span></div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding:22px 0"><span style="font-family:'JetBrains Mono';font-size:14px;color:var(--accent);min-width:54px">04</span><span style="font-family:'Barlow Condensed';font-weight:700;font-size:44px;letter-spacing:-.5px;flex:1;padding:0 30px;color:var(--accent)">The QR Alert</span><span style="font-family:'JetBrains Mono';font-size:13px;color:var(--accent)">— the trust</span></div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding:22px 0"><span style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);min-width:54px">05</span><span style="font-family:'Barlow Condensed';font-weight:700;font-size:44px;letter-spacing:-.5px;flex:1;padding:0 30px">The Business</span><span style="font-family:'JetBrains Mono';font-size:13px;color:var(--mut)">— the model</span></div>
+      <div style="display:flex;align-items:baseline;justify-content:space-between;padding:22px 0"><span style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);min-width:54px">06</span><span style="font-family:'Barlow Condensed';font-weight:700;font-size:44px;letter-spacing:-.5px;flex:1;padding:0 30px">The Vision</span><span style="font-family:'JetBrains Mono';font-size:13px;color:var(--mut)">— what's next</span></div>
     </div>
   </div>
 </section>
 
-<!-- 03 NATIONWIDE -->
-<section class="sec sec-ink">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">03 / Nationwide search</span><span class="eyebrow">The reach</span></div>
-    <div class="kicker">one app, every city —</div>
-    <h2 class="h-big">Wherever you drive, <span class="serif-acc">a spot</span> waits.</h2>
-    <p class="lede" style="margin-top:36px;">Same city, different city, road trip across the country — Parkly's map doesn't care. Every listed spot is searchable the moment it's live, so drivers find real, bookable parking anywhere the network reaches.</p>
+<!-- 03 PROBLEM HERO -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--ink);color:var(--paper);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">01 &nbsp;/ &nbsp;THE PROBLEM</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">DEAD SPACE</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;max-width:1520px">
+    <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:44px;color:var(--accent);margin-bottom:38px">the city isn't full —</div>
+    <h2 style="font-family:'Barlow Condensed';font-weight:800;font-size:132px;line-height:.9;letter-spacing:-4px;text-wrap:balance">It's just <span style="color:var(--accent);font-style:italic;font-family:'Instrument Serif',serif;font-weight:400">hiding</span> its space.</h2>
+    <p style="font-size:26px;line-height:1.5;color:#cfcfcf;max-width:920px;margin-top:44px;text-wrap:pretty">Driveways sit empty all day while their owners are at work. Private lots go quiet on weekends. Drivers circle the same block looking for a spot that's ten feet away — behind a fence, off the map, un-bookable.</p>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">
+    <span>CIRCLING <span style="color:var(--paper);margin:0 14px">·</span> IDLE <span style="color:var(--paper);margin:0 14px">·</span> UNBOOKABLE</span>
+    <span style="color:#cfcfcf">THE PROBLEM</span>
   </div>
 </section>
 
-<!-- 03b COVERAGE -->
-<section class="sec">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">03 / Nationwide search</span><span class="eyebrow">How it grows</span></div>
-    <div class="g2">
-      <div>
-        <div class="kicker">it scales with people —</div>
-        <h2 class="h-mid">No lot ever needs installing.</h2>
-        <p class="lede" style="margin-top:26px;color:#555;font-size:clamp(16px,1.4vw,20px);">Every new host adds one more dot to the map — instantly searchable, no infrastructure required. That's what lets Parkly cover a city, then a state, then the country, at the pace people sign up.</p>
-      </div>
-      <div style="text-align:center;">
-        <svg viewBox="0 0 400 400" width="100%" style="max-width:380px;overflow:visible;">
-          <circle cx="200" cy="200" r="60" fill="none" stroke="var(--line)" stroke-width="1.5"/>
-          <circle cx="200" cy="200" r="120" fill="none" stroke="var(--line)" stroke-width="1.5"/>
-          <circle cx="200" cy="200" r="180" fill="none" stroke="var(--line)" stroke-width="1.5"/>
-          <circle cx="200" cy="200" r="8" fill="var(--accent)"/>
-          <circle cx="235" cy="150" r="6" fill="var(--ink)"/><circle cx="150" cy="240" r="6" fill="var(--ink)"/>
-          <circle cx="270" cy="250" r="6" fill="var(--ink)"/><circle cx="120" cy="150" r="6" fill="var(--ink)"/>
-          <circle cx="180" cy="320" r="5" fill="#bdbdbd"/><circle cx="310" cy="180" r="5" fill="#bdbdbd"/>
-          <circle cx="90" cy="260" r="5" fill="#bdbdbd"/><circle cx="260" cy="90" r="5" fill="#bdbdbd"/>
-          <circle cx="330" cy="290" r="4" fill="#dedede"/><circle cx="70" cy="100" r="4" fill="#dedede"/>
-          <circle cx="330" cy="110" r="4" fill="#dedede"/><circle cx="100" cy="330" r="4" fill="#dedede"/>
-        </svg>
-        <div class="eyebrow" style="margin-top:18px;font-size:11px;">First host → neighborhood → city → nation</div>
-      </div>
+<!-- 04 UNUSED SPACE DETAIL -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--paper);color:var(--ink);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">02 &nbsp;/ &nbsp;UNUSED SPACE</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">THE SUPPLY</div>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center">
+    <div>
+      <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:36px;color:var(--accent);margin-bottom:26px">what's already there —</div>
+      <h2 style="font-family:'Barlow Condensed';font-weight:800;font-size:96px;line-height:.9;letter-spacing:-2px">Turn idle<br>space into<br>real spots.</h2>
+      <p style="font-size:21px;line-height:1.55;color:#555;max-width:520px;margin-top:32px">Parkly lets anyone with a driveway, a lot, or a spare garage bay list it in minutes. No construction, no permits — just space that already exists, put to work.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0;border-left:1px solid var(--line)">
+      <div style="display:flex;align-items:center;gap:28px;padding:26px 0 26px 40px;border-bottom:1px solid var(--line)"><span style="font-family:'Barlow Condensed';font-weight:800;font-size:56px;color:var(--accent);min-width:110px">01</span><div><div style="font-family:'Barlow Condensed';font-weight:700;font-size:32px">Home driveways</div><div style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);margin-top:4px">empty on weekdays, 9–5</div></div></div>
+      <div style="display:flex;align-items:center;gap:28px;padding:26px 0 26px 40px;border-bottom:1px solid var(--line)"><span style="font-family:'Barlow Condensed';font-weight:800;font-size:56px;color:var(--accent);min-width:110px">02</span><div><div style="font-family:'Barlow Condensed';font-weight:700;font-size:32px">Office lots</div><div style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);margin-top:4px">empty nights &amp; weekends</div></div></div>
+      <div style="display:flex;align-items:center;gap:28px;padding:26px 0 26px 40px;border-bottom:1px solid var(--line)"><span style="font-family:'Barlow Condensed';font-weight:800;font-size:56px;color:var(--accent);min-width:110px">03</span><div><div style="font-family:'Barlow Condensed';font-weight:700;font-size:32px">Retail &amp; community lots</div><div style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);margin-top:4px">idle outside business hours</div></div></div>
+      <div style="display:flex;align-items:center;gap:28px;padding:26px 0 26px 40px"><span style="font-family:'Barlow Condensed';font-weight:800;font-size:56px;color:var(--accent);min-width:110px">04</span><div><div style="font-family:'Barlow Condensed';font-weight:700;font-size:32px">Spare garage bays</div><div style="font-family:'JetBrains Mono';font-size:14px;color:var(--mut);margin-top:4px">rarely used at all</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- 04 QR ALERT -->
-<section class="sec sec-ink">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">04 / The QR alert</span><span class="eyebrow">The trust</span></div>
-    <div class="g2" style="align-items:center;">
-      <div>
-        <div class="kicker">a knock, without a number —</div>
-        <h2 class="h-big" style="font-size:clamp(48px,7.4vw,110px);">Scan the code. Skip the <span class="serif-acc">issue</span>.</h2>
-        <p class="lede" style="margin-top:36px;">Every Parkly spot carries a QR sticker. Blocked in? Need someone to move? Scan it, send a message — it reaches the driver instantly, with neither side ever seeing the other's phone number.</p>
-      </div>
-      <div style="text-align:center;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-115 110 130 130" width="min(220px,50vw)" style="overflow:visible;">
-          <g fill="var(--accent)"><rect x="-104.85" y="124.387" width="20.5" height="20.5"/><rect x="-83.35" y="124.387" width="20.5" height="20.5"/><rect x="-61.85" y="124.387" width="20.5" height="20.5"/><rect x="-104.85" y="145.887" width="20.5" height="20.5"/><rect x="-83.35" y="167.387" width="20.5" height="20.5"/><rect x="-61.85" y="167.387" width="20.5" height="20.5"/><rect x="-104.85" y="167.387" width="20.5" height="20.5"/><rect x="-61.85" y="145.887" width="20.5" height="20.5"/><rect x="-18.85" y="124.387" width="20.5" height="20.5"/><rect x="-61.85" y="188.887" width="20.5" height="20.5"/><rect x="-40.35" y="210.387" width="20.5" height="20.5"/><rect x="-18.85" y="210.387" width="20.5" height="20.5"/><rect x="-18.85" y="188.887" width="20.5" height="20.5"/><rect x="-104.85" y="210.387" width="20.5" height="20.5"/><rect x="-61.85" y="210.387" width="20.5" height="20.5"/><rect x="-40.35" y="167.387" width="20.5" height="20.5"/></g>
-        </svg>
-      </div>
+<!-- 05 NATIONWIDE HERO -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--ink);color:var(--paper);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">03 &nbsp;/ &nbsp;NATIONWIDE SEARCH</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">THE REACH</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;max-width:1520px">
+    <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:44px;color:var(--accent);margin-bottom:38px">one app, every city —</div>
+    <h2 style="font-family:'Barlow Condensed';font-weight:800;font-size:172px;line-height:.88;letter-spacing:-5px;text-wrap:balance">Wherever you<br>drive, <span style="color:var(--accent);font-style:italic;font-family:'Instrument Serif',serif;font-weight:400">a spot</span> waits.</h2>
+    <p style="font-size:26px;line-height:1.5;color:#cfcfcf;max-width:920px;margin-top:48px;text-wrap:pretty">Same city, different city, road trip across the country — Parkly's map doesn't care. Every listed spot is searchable the moment it's live, so drivers find real, bookable parking anywhere the network reaches.</p>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">
+    <span>SEARCH <span style="color:var(--paper);margin:0 14px">·</span> BOOK <span style="color:var(--paper);margin:0 14px">·</span> PARK</span>
+    <span style="color:#cfcfcf">THE REACH</span>
+  </div>
+</section>
+
+<!-- 06 NATIONWIDE DETAIL -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--paper);color:var(--ink);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">03 &nbsp;/ &nbsp;NATIONWIDE SEARCH</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">HOW IT GROWS</div>
+  </div>
+  <div style="flex:1;display:grid;grid-template-columns:1.1fr 1fr;gap:90px;align-items:center">
+    <div>
+      <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:36px;color:var(--accent);margin-bottom:26px">it scales with people —</div>
+      <h2 style="font-family:'Barlow Condensed';font-weight:800;font-size:88px;line-height:.9;letter-spacing:-2px">No lot ever<br>needs installing.</h2>
+      <p style="font-size:21px;line-height:1.55;color:#555;max-width:540px;margin-top:32px">Every new host adds one more dot to the map — instantly searchable, no infrastructure required. That's what lets Parkly cover a city, then a state, then the country, at the pace people sign up.</p>
+    </div>
+    <div style="position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center">
+      <svg viewBox="0 0 400 400" width="440" style="overflow:visible">
+        <circle cx="200" cy="200" r="60" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="120" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="180" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="8" fill="var(--accent)"/>
+        <circle cx="235" cy="150" r="6" fill="var(--ink)"/>
+        <circle cx="150" cy="240" r="6" fill="var(--ink)"/>
+        <circle cx="270" cy="250" r="6" fill="var(--ink)"/>
+        <circle cx="120" cy="150" r="6" fill="var(--ink)"/>
+        <circle cx="180" cy="320" r="5" fill="#bdbdbd"/>
+        <circle cx="310" cy="180" r="5" fill="#bdbdbd"/>
+        <circle cx="90" cy="260" r="5" fill="#bdbdbd"/>
+        <circle cx="260" cy="90" r="5" fill="#bdbdbd"/>
+        <circle cx="330" cy="290" r="4" fill="#dedede"/>
+        <circle cx="70" cy="100" r="4" fill="#dedede"/>
+        <circle cx="330" cy="110" r="4" fill="#dedede"/>
+        <circle cx="100" cy="330" r="4" fill="#dedede"/>
+      </svg>
+      <div style="position:absolute;bottom:-10px;left:0;right:0;text-align:center;font-family:'JetBrains Mono';font-size:13px;letter-spacing:2px;color:var(--mut)">FIRST HOST → NEIGHBORHOOD → CITY → NATION</div>
     </div>
   </div>
 </section>
 
-<!-- 04b FLOW -->
-<section class="sec">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">04 / The QR alert</span><span class="eyebrow">Three steps</span></div>
-    <div class="kicker">no app required to reply —</div>
-    <div class="steps">
-      <div class="step"><div class="n">STEP 01</div><h3>Scan the sticker.</h3><p>Any phone camera reads the code on the spot's Parkly sticker — no download needed to send an alert.</p></div>
-      <div class="step"><div class="n">STEP 02</div><h3>Send a message.</h3><p>A short web form opens. Type the issue — "blocked me in," "need you to move" — and send.</p></div>
-      <div class="step"><div class="n">STEP 03</div><h3>Driver gets notified.</h3><p>The message routes straight to the driver's phone. Both sides stay anonymous, every time.</p></div>
+<!-- 07 QR HERO -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--ink);color:var(--paper);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">04 &nbsp;/ &nbsp;THE QR ALERT</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">THE TRUST</div>
+  </div>
+  <div style="flex:1;display:flex;justify-content:space-between;align-items:center;gap:80px">
+    <div style="max-width:960px">
+      <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:44px;color:var(--accent);margin-bottom:38px">a knock, without a number —</div>
+      <h2 style="font-family:'Barlow Condensed';font-weight:800;font-size:150px;line-height:.88;letter-spacing:-5px;text-wrap:balance">Scan the code.<br>Skip the <span style="color:var(--accent);font-style:italic;font-family:'Instrument Serif',serif;font-weight:400">issue</span>.</h2>
+      <p style="font-size:26px;line-height:1.5;color:#cfcfcf;max-width:820px;margin-top:44px;text-wrap:pretty">Every Parkly spot carries a QR sticker. Blocked in? Need someone to move? Scan it, send a message — it reaches the driver instantly, with neither side ever seeing the other's phone number.</p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-115 110 130 130" width="260" style="overflow:visible;flex-shrink:0">
+      <g fill="var(--accent)"><rect x="-104.85" y="124.387" width="20.5" height="20.5"/><rect x="-83.35" y="124.387" width="20.5" height="20.5"/><rect x="-61.85" y="124.387" width="20.5" height="20.5"/><rect x="-104.85" y="145.887" width="20.5" height="20.5"/><rect x="-83.35" y="167.387" width="20.5" height="20.5"/><rect x="-61.85" y="167.387" width="20.5" height="20.5"/><rect x="-104.85" y="167.387" width="20.5" height="20.5"/><rect x="-61.85" y="145.887" width="20.5" height="20.5"/><rect x="-18.85" y="124.387" width="20.5" height="20.5"/><rect x="-61.85" y="188.887" width="20.5" height="20.5"/><rect x="-40.35" y="210.387" width="20.5" height="20.5"/><rect x="-18.85" y="210.387" width="20.5" height="20.5"/><rect x="-18.85" y="188.887" width="20.5" height="20.5"/><rect x="-104.85" y="210.387" width="20.5" height="20.5"/><rect x="-61.85" y="210.387" width="20.5" height="20.5"/><rect x="-40.35" y="167.387" width="20.5" height="20.5"/></g>
+    </svg>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">
+    <span>SCAN <span style="color:var(--paper);margin:0 14px">·</span> MESSAGE <span style="color:var(--paper);margin:0 14px">·</span> ANONYMOUS</span>
+    <span style="color:#cfcfcf">THE TRUST</span>
+  </div>
+</section>
+
+<!-- 08 QR DETAIL / FLOW -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--paper);color:var(--ink);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">04 &nbsp;/ &nbsp;THE QR ALERT</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">THREE STEPS</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0">
+    <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:36px;color:var(--accent);margin-bottom:46px">no app required to reply —</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid var(--line)">
+      <div style="padding:44px 48px 0 0;border-right:1px solid var(--line)"><div style="font-family:'JetBrains Mono';font-size:14px;color:var(--accent);margin-bottom:18px">STEP 01</div><h3 style="font-family:'Barlow Condensed';font-weight:800;font-size:60px;line-height:.95;letter-spacing:-1px;margin-bottom:20px">Scan the sticker.</h3><p style="font-size:19px;line-height:1.55;color:#555">Any phone camera reads the code on the spot's Parkly sticker — no download needed to send an alert.</p></div>
+      <div style="padding:44px 48px 0 48px;border-right:1px solid var(--line)"><div style="font-family:'JetBrains Mono';font-size:14px;color:var(--accent);margin-bottom:18px">STEP 02</div><h3 style="font-family:'Barlow Condensed';font-weight:800;font-size:60px;line-height:.95;letter-spacing:-1px;margin-bottom:20px">Send a message.</h3><p style="font-size:19px;line-height:1.55;color:#555">A short web form opens. Type the issue — "blocked me in," "need you to move" — and send.</p></div>
+      <div style="padding:44px 0 0 48px"><div style="font-family:'JetBrains Mono';font-size:14px;color:var(--accent);margin-bottom:18px">STEP 03</div><h3 style="font-family:'Barlow Condensed';font-weight:800;font-size:60px;line-height:.95;letter-spacing:-1px;margin-bottom:20px">Driver gets notified.</h3><p style="font-size:19px;line-height:1.55;color:#555">The message routes straight to the driver's phone. Both sides stay anonymous, every time.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 05 BUSINESS -->
-<section class="split" style="border-bottom:1px solid var(--line);">
-  <div style="background:var(--ink);color:var(--paper);">
-    <div class="eyebrow" style="margin-bottom:40px;">A / The host</div>
-    <div class="kicker" style="font-size:clamp(22px,2.4vw,32px);margin-bottom:6px;">earns.</div>
-    <h3 class="h-mid" style="color:var(--paper);">Lists a spot, gets paid.</h3>
-    <p style="font-size:17.5px;line-height:1.55;color:#bbb;max-width:46ch;margin-top:18px;">A driveway that made nothing yesterday makes real money today. Parkly handles booking, payment, and the QR sticker on move-in.</p>
+<!-- 09 BUSINESS MODEL -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--ink);color:var(--paper);font-family:'Barlow',sans-serif;padding:0;display:flex;position:absolute;overflow:hidden">
+  <div style="flex:1;background:var(--ink);padding:80px 80px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid #262626">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">A &nbsp;/ &nbsp;THE HOST</div>
+    <div>
+      <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:34px;color:var(--accent);margin-bottom:8px">earns.</div>
+      <h3 style="font-family:'Barlow Condensed';font-weight:800;font-size:88px;line-height:.92;letter-spacing:-2px;color:var(--paper)">Lists a spot,<br>gets paid.</h3>
+      <p style="font-size:19px;line-height:1.5;color:#bbb;max-width:480px;margin-top:22px">A driveway that made nothing yesterday makes real money today. Parkly handles booking, payment, and the QR sticker on move-in.</p>
+    </div>
   </div>
-  <div style="background:var(--paper);">
-    <div class="eyebrow" style="margin-bottom:40px;">B / The platform</div>
-    <div class="kicker" style="font-size:clamp(22px,2.4vw,32px);margin-bottom:6px;">takes a small cut.</div>
-    <h3 class="h-mid">A slice of every booking.</h3>
-    <p style="font-size:17.5px;line-height:1.55;color:#555;max-width:46ch;margin-top:18px;">A simple service fee on each transaction. No listing fees, no subscriptions — Parkly only earns when a spot actually gets used.</p>
-  </div>
-</section>
-
-<!-- 05b MARKET -->
-<section class="sec sec-ink">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">05 / The business</span><span class="eyebrow">The opportunity</span></div>
-    <div class="kicker">a market the size of a country —</div>
-    <h2 class="h-big">Built for <span class="serif-acc">India</span>, first.</h2>
-    <p class="lede" style="margin-top:36px;">More two- and four-wheelers join Indian roads every year than most countries have on them entirely — and almost none of that growth came with a parking plan. Every metro, every high-rise, every market street shares the same search for the same six feet of curb.</p>
-    <div class="mcols">
-      <div><div class="t">EVERY METRO</div><p>Mumbai to Bengaluru — the same story, block by block.</p></div>
-      <div><div class="t">EVERY BUILDING</div><p>Housing societies and offices sit on space nobody has put to work yet.</p></div>
-      <div><div class="t">EVERY DAY</div><p>This isn't a seasonal squeeze — it's the daily default.</p></div>
+  <div style="flex:1;background:var(--paper);color:var(--ink);padding:80px 80px;display:flex;flex-direction:column;justify-content:space-between">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">B &nbsp;/ &nbsp;THE PLATFORM</div>
+    <div>
+      <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:34px;color:var(--accent);margin-bottom:8px">takes a small cut.</div>
+      <h3 style="font-family:'Barlow Condensed';font-weight:800;font-size:88px;line-height:.92;letter-spacing:-2px">A slice of<br>every booking.</h3>
+      <p style="font-size:19px;line-height:1.5;color:#555;max-width:480px;margin-top:22px">A simple service fee on each transaction. No listing fees, no subscriptions — Parkly only earns when a spot actually gets used.</p>
     </div>
   </div>
 </section>
 
-<!-- 06 VISION -->
-<section class="sec sec-ink" style="border-bottom:none;">
-  <div class="wrap">
-    <div class="meta-row"><span class="eyebrow">06 / The vision</span><span class="eyebrow">What's next</span></div>
-    <div class="kicker">every idle spot, working —</div>
-    <h2 class="h-big">A parking spot for <span class="serif-acc">every</span> car.</h2>
-    <p class="lede" style="margin-top:36px;">Not by building more concrete — by using what's already there. Every driveway, lot, and garage on the network is one less car circling the block.</p>
+<!-- 10 MARKET -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--ink);color:var(--paper);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">05 &nbsp;/ &nbsp;THE BUSINESS</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">THE OPPORTUNITY</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;max-width:1560px">
+    <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:40px;color:var(--accent);margin-bottom:32px">a market the size of a country —</div>
+    <h2 style="font-family:'Barlow Condensed';font-weight:800;font-size:144px;line-height:.9;letter-spacing:-4px;text-wrap:balance">Built for <span style="color:var(--accent);font-style:italic;font-family:'Instrument Serif',serif;font-weight:400">India</span>,<br>first.</h2>
+    <p style="font-size:25px;line-height:1.55;color:#cfcfcf;max-width:980px;margin-top:40px;text-wrap:pretty">More two- and four-wheelers join Indian roads every year than most countries have on them entirely — and almost none of that growth came with a parking plan. Every metro, every high-rise, every market street shares the same search for the same six feet of curb.</p>
+    <div style="display:flex;gap:0;margin-top:52px;border-top:1px solid #262626">
+      <div style="flex:1;padding:26px 40px 0 0;border-right:1px solid #262626"><div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:2px;color:var(--accent);margin-bottom:10px">EVERY METRO</div><div style="font-size:18px;line-height:1.5;color:#bbb">Mumbai to Bengaluru — the same story, block by block.</div></div>
+      <div style="flex:1;padding:26px 40px;border-right:1px solid #262626"><div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:2px;color:var(--accent);margin-bottom:10px">EVERY BUILDING</div><div style="font-size:18px;line-height:1.5;color:#bbb">Housing societies and offices sit on space nobody has put to work yet.</div></div>
+      <div style="flex:1;padding:26px 0 0 40px"><div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:2px;color:var(--accent);margin-bottom:10px">EVERY DAY</div><div style="font-size:18px;line-height:1.5;color:#bbb">This isn't a seasonal squeeze — it's the daily default.</div></div>
+    </div>
   </div>
 </section>
 
-<footer>
-  <div class="wrap" style="padding-top:56px;padding-bottom:56px;">
-    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline;">
-      <div>
-        <div style="font-family:var(--disp);font-weight:800;font-size:26px;letter-spacing:-.5px;">Thank you for reading<span style="color:var(--accent);">.</span></div>
-        <p style="font-size:15px;line-height:1.6;color:#555;max-width:52ch;margin-top:10px;">Product, brand, operations and this case study — by one person, built with modern tools and a lot of iteration.</p>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:10px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.05em;">
-        <a href="index.html" style="border-bottom:1px solid var(--accent);width:fit-content;">← Back to portfolio</a>
-        <a href="parkly-logo-case-study.html" style="border-bottom:1px solid var(--accent);width:fit-content;">Logo case study ↗</a>
-        <a href="https://parkly.co.in" target="_blank" rel="noopener" style="border-bottom:1px solid var(--accent);width:fit-content;">parkly.co.in ↗</a>
-      </div>
-    </div>
+<!-- 11 VISION -->
+<section class="slide" style="box-sizing:border-box;width:1920px;height:1080px;background:var(--ink);color:var(--paper);font-family:'Barlow',sans-serif;padding:80px 110px;display:flex;flex-direction:column;position:absolute;overflow:hidden">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">06 &nbsp;/ &nbsp;THE VISION</div>
+    <div style="font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">WHAT'S NEXT</div>
   </div>
-</footer>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;max-width:1520px">
+    <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:44px;color:var(--accent);margin-bottom:38px">every idle spot, working —</div>
+    <h2 style="font-family:'Barlow Condensed';font-weight:800;font-size:172px;line-height:.88;letter-spacing:-5px;text-wrap:balance">A parking spot<br>for <span style="color:var(--accent);font-style:italic;font-family:'Instrument Serif',serif;font-weight:400">every</span> car.</h2>
+    <p style="font-size:26px;line-height:1.5;color:#cfcfcf;max-width:920px;margin-top:48px;text-wrap:pretty">Not by building more concrete — by using what's already there. Every driveway, lot, and garage on the network is one less car circling the block.</p>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;font-family:'JetBrains Mono';font-size:13px;letter-spacing:3px;color:var(--mut)">
+    <span>THANK YOU</span>
+    <span style="color:#cfcfcf">PARKLY</span>
+  </div>
+</section>
+
+</div>
+</div>
+
+<div id="hud-bot" class="hud">
+  <div class="navbtn" id="prev" role="button" aria-label="Previous slide" tabindex="0">‹</div>
+  <span id="counter">1 / 11</span>
+  <div class="navbtn" id="next" role="button" aria-label="Next slide" tabindex="0">›</div>
+</div>
+<div id="hint">← → arrow keys · swipe · click to advance</div>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var frame = document.getElementById('frame');
+  var counter = document.getElementById('counter');
+  var bar = document.getElementById('bar');
+  var hint = document.getElementById('hint');
+  var i = 0, n = slides.length;
+
+  function fit(){
+    var s = Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    frame.style.transform = 'scale(' + s + ')';
+  }
+  function show(k){
+    i = Math.max(0, Math.min(n-1, k));
+    slides.forEach(function(sl, j){ sl.classList.toggle('on', j===i); });
+    counter.textContent = (i+1) + ' / ' + n;
+    bar.style.width = (((i+1)/n)*100) + '%';
+    if (location.hash !== '#'+(i+1)) history.replaceState(null,'','#'+(i+1));
+  }
+  function nav(d){ show(i+d); if (hint) hint.style.opacity = 0; }
+
+  document.getElementById('prev').addEventListener('click', function(e){ e.stopPropagation(); nav(-1); });
+  document.getElementById('next').addEventListener('click', function(e){ e.stopPropagation(); nav(1); });
+  document.addEventListener('keydown', function(e){
+    if (e.key==='ArrowRight' || e.key===' ' || e.key==='PageDown') { e.preventDefault(); nav(1); }
+    if (e.key==='ArrowLeft' || e.key==='PageUp') { e.preventDefault(); nav(-1); }
+    if (e.key==='Home') show(0);
+    if (e.key==='End') show(n-1);
+  });
+  document.getElementById('stage').addEventListener('click', function(e){
+    if (e.target.closest('a') || e.target.closest('.navbtn')) return;
+    nav(e.clientX < window.innerWidth/2 ? -1 : 1);
+  });
+  var tx = null;
+  document.addEventListener('touchstart', function(e){ tx = e.changedTouches[0].clientX; }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if (tx===null) return;
+    var dx = e.changedTouches[0].clientX - tx; tx = null;
+    if (Math.abs(dx) > 40) nav(dx < 0 ? 1 : -1);
+  }, {passive:true});
+
+  window.addEventListener('resize', fit);
+  fit();
+  var h = parseInt((location.hash||'').slice(1), 10);
+  show(isNaN(h) ? 0 : h-1);
+  setTimeout(function(){ if (hint) hint.style.opacity = 0; }, 6000);
+})();
+</script>
 
 </body>
 </html>
