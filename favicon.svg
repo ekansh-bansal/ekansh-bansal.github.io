@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Ekansh Bansal</title>
+  <rect width="64" height="64" rx="14" fill="#F6F2EB"/>
+  <g fill="#0A0A0A">
+    <rect x="15" y="14" width="8" height="36"/>
+    <rect x="15" y="14" width="24" height="8"/>
+    <rect x="15" y="28" width="19" height="8"/>
+    <rect x="15" y="42" width="24" height="8"/>
+  </g>
+  <circle cx="46" cy="46" r="5" fill="#E1320A"/>
+</svg>
