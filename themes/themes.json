@@ -1,0 +1,12 @@
+{
+  "default": "sky-islands",
+  "themes": [
+    {
+      "id": "sky-islands",
+      "name": "Sky Islands",
+      "description": "A day told as floating islands — soft painted clouds, sunrise to night, with a little car that drives as you scroll.",
+      "path": "/themes/sky-islands/",
+      "added": "2026-10"
+    }
+  ]
+}
